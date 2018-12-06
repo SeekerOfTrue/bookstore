@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Vidaloka');
+
+/* General */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./img/books.png);
+  background-size: cover;
+  margin: 1rem 18rem;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: rgb(112, 21, 21);
+}
+
+.navbar-nav a {
+  border-left: 2px solid rgba(255, 255, 255, 0);
+  border-right: 2px solid rgba(255, 255, 255, 0);
+  font-size: 18px;
+}
+
+.navbar-nav a.active {
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+/* List of books */
+.booklist {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px;
+}
+
+.bookOnList  {
+  padding: 5px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding: 15px;
+  justify-content: center;
+  align-content: center;
+  background: rgb(189, 160, 81);
+  border: 6px double black;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.bookOnList:hover {
+  background: rgb(133, 107, 35);
+}
+
+.bookOnList img {
+  width: 100px;
+  height: 100px;
+}
+
+.mainInfo {
+  display: grid;
+  align-content: center;
+}
+
+.mainInfo h4 {
+  font-family: 'Vidaloka', serif;
+  color: aliceblue;
+}
+
+.mainInfo p {
+  font-family: 'Parisienne', cursive;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.noBooks {
+ margin: 0px auto;
+}
+
+/* Book info */
+.card {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.card-text {
+  text-indent: 50px;
+}
+
+
+/* Small screen */
+@media screen and (max-width: 1350px) {
+  .mainInfo h4, .mainInfo p {
+    font-size: 24px;
+  }
+  body {
+    margin: 1rem 8rem;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .booklist{
+    grid-template-columns: 1fr;
+  }
+  .mainInfo h4, .mainInfo p {
+    font-size: 29px;
+  }
+  body {
+    margin: 1rem 3rem;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .booklist{
+    grid-template-columns: 1fr;
+  }
+  .mainInfo h4, .mainInfo p {
+    font-size: 21px;
+  }
+  body {
+    margin: 1rem;
+  }
+  .navbar-nav a  {
+   font-size: 15px;
+  }
+}
